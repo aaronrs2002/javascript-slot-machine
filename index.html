@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>Hello, world!</title>
+    <title>javascript slot machine</title>
 </head>
 
 <body>
@@ -24,17 +24,26 @@
         <div class="row">
             <div class="col-md-12">
 
-                <div class="btn-group block" role="group">
-                    <button type="button" class="btn btn-secondary" onClick="javascript:checkRandom(true)">Pull</button>
-                    <button type="button" class="btn btn-secondary"
-                        onClick="javascript:checkRandom(false)">Stop</button>
+                <div class="btn-group block mb-2" role="group">
+                    <button type="button" class="btn btn-primary" onClick="javascript:checkRandom(true)">Pull</button>
+                    <button type="button" class="btn btn-primary" onClick="javascript:checkRandom(false)">Stop</button>
                 </div>
             </div>
             <div class="col-md-12">
-                <h1>Total:<span id="iconSum"></span>
+
+                <div class="alert alert-secondary" role="alert">
+                    <h1>Total:<span id="iconSum"></span>
+                </div>
+
+
+
                 </h1>
             </div>
-            <div class="col-md-12" id="iconTarget">
+            <div class="col-md-12">
+
+                <div class="alert alert-light" role="alert">
+                    <span id="iconTarget"></span>
+                </div>
 
                 <!--  
                 <div data-icon="cherry"></div>

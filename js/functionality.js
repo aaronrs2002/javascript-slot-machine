@@ -14,12 +14,7 @@ function getRandom() {
             iconTargetHTML = iconTargetHTML + "<div data-icon='" + icons[number].title + "'></div>";
         }
         document.getElementById("iconTarget").innerHTML = iconTargetHTML;
-    } else {
-        clearInterval(random);
-        console.log("random is false;");
-        return false;
     }
-
 }
 
 function checkRandom(status) {
