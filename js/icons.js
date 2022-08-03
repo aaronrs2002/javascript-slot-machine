@@ -3,7 +3,7 @@ const icons = [
     { title: "lemon", value: 50 },
     { title: "watermelon", value: 50 },
     { title: "bell", value: 0 },
-    { title: "bar", value: -250 },
+    { title: "bar", value: -150 },
     { title: "heart", value: 100 },
     { title: "purple", value: 50 },
     { title: "clover", value: 100 },
@@ -14,3 +14,4 @@ const icons = [
     { title: "diamond", value: 250 },
     { title: "dollars", value: 100 }
 ];
+
