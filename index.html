@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/brands.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/solid.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://aaronrs2002.github.io/black-jack/css/bootstrap.min.css" rel="stylesheet" id="themedStyle">
+
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="btn-group block" role="group">
+                    <button type="button" class="btn btn-secondary" onClick="javascript:checkRandom(true)">Pull</button>
+                    <button type="button" class="btn btn-secondary"
+                        onClick="javascript:checkRandom(false)">Stop</button>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h1>Total:<span id="iconSum"></span>
+                </h1>
+            </div>
+            <div class="col-md-12" id="iconTarget">
+
+                <!--  
+                <div data-icon="cherry"></div>
+                <div data-icon="lemon"></div>
+                <div data-icon="watermelon"></div>
+                <div data-icon="bell"></div>
+                <div data-icon="bar"></div>
+                <div data-icon="heart"></div>
+                <div data-icon="purple"></div>
+                <div data-icon="clover"></div>
+                <div data-icon="orange"></div>
+                <div data-icon="horseshoe"></div>
+                <div data-icon="grapes"></div>
+                <div data-icon="apple"></div>
+                <div data-icon="diamond"></div>
+                <div data-icon="dollars"></div>
+            -->
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 animated fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" id="socialList">
+                </div>
+                <div class="col-md-5">
+                    <div class="btn-group block" role="group" id="gameLinks"></div>
+                </div>
+                <div class="col-md-3"> <select class="form-control" onChange="changeTheme()" id="themes"></select></div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="https://aaronrs2002.github.io/black-jack/js/footer.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/functionality.js"></script>
+<script src="https://aaronrs2002.github.io/black-jack/js/themesList.js"></script>
+
+</html>

@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Passion+One|Raleway&display=swap");
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+
+    background: url("https://aaronrs2002.github.io/black-jack/img/cardBG.jpg");
+}
+
+body:after {
+    content: "";
+    opacity: .3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+
+}
+
+.btn-group.block {
+    width: 100%;
+    padding: 0px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Passion One", cursive;
+}
+
+.hide {
+    display: none !important;
+}
+
+.btn-group.form-control {
+    padding: 0;
+
+}
+
+/*START FOOTER*/
+footer {
+    box-shadow: 0 -4px 3px rgb(0 0 0 / 8%);
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    text-align: center;
+}
+
+#socialList a i {
+    font-size: 1.5rem;
+    padding: 12px 10px;
+
+}
+
+/*START SLOT ICONS HERE*/
+
+
+[data-icon] {
+    background-image: url('../img/slotMachineIcons.jpg');
+    background-repeat: no-repeat;
+    padding: 5px;
+    margin: 0px 5px;
+    display: inline-block;
+    height: 88px;
+    width: 88px;
+    /* border: 1px rgb(2, 96, 18) solid;*/
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+[data-icon='cherry'] {
+    background-position: -23px -5px;
+
+}
+
+[data-icon='lemon'] {
+    background-position: -142px -5px;
+
+}
+
+[data-icon='watermelon'] {
+    background-position: -261px -5px;
+
+}
+
+
+[data-icon='bell'] {
+    background-position: -33px -110px;
+
+}
+
+
+[data-icon='bar'] {
+    background-position: -142px -110px;
+
+}
+
+[data-icon='heart'] {
+    background-position: -261px -110px;
+}
+
+[data-icon='purple'] {
+    background-position: -23px -230px;
+}
+
+[data-icon='clover'] {
+    background-position: -142px -230px;
+}
+
+[data-icon='orange'] {
+    background-position: -265px -230px;
+}
+
+[data-icon='horseshoe'] {
+    background-position: -34px -350px;
+}
+
+[data-icon='grapes'] {
+    background-position: -147px -350px;
+}
+
+[data-icon='apple'] {
+    background-position: -265px -350px;
+}
+
+[data-icon='diamond'] {
+    background-position: -85px -463px;
+}
+
+[data-icon='diamond'] {
+    background-position: -85px -463px;
+}
+
+[data-icon='dollars'] {
+    background-position: -200px -467px;
+}
