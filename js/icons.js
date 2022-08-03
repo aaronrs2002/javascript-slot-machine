@@ -2,7 +2,7 @@ const icons = [
     { title: "cherry", value: 50 },
     { title: "lemon", value: 50 },
     { title: "watermelon", value: 50 },
-    { title: "bell", value: 0 },
+    { title: "bell", value: -100 },
     { title: "bar", value: -150 },
     { title: "heart", value: 100 },
     { title: "purple", value: 50 },

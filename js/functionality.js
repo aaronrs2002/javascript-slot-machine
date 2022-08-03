@@ -1,14 +1,12 @@
 function generate() {
     return Math.floor(Math.random() * icons.length);
 }
-
 let random = null;
 let iconObj = [];
 let ckMatches = [];
 let doublePrize = 0;
 let triplePrize = 0;
 let count = 0;
-
 function getRandom() {
     if (random) {
         iconObj = [];
@@ -20,8 +18,6 @@ function getRandom() {
             ckMatches.push(icons[number].title);
             iconTargetHTML = iconTargetHTML + "<div data-icon='" + icons[number].title + "'></div>";
         }
-
-
         document.getElementById("iconTarget").innerHTML = iconTargetHTML;
     }
 }
@@ -52,34 +48,29 @@ function checkRandom(status) {
         ];
         clearInterval(random, null);
         random = null;
-
         for (let i = 0; i < icons.length; i++) {
             for (let j = 0; j < ckMatches.length; j++) {
                 if (ckMatches[j] === "bar" && ckMatches[j] === icons[i].title) {
                     iconSum = iconSum - 150;
-
                     details = details + "<li><h3>" + icons[i].title + ": $-150</h3></li>";
-                    console.log("ckMatches: " + ckMatches);
                 }
-                if (ckMatches[j] !== "bar" && ckMatches[j] === icons[i].title) {
+                if (ckMatches[j] === "bell" && ckMatches[j] === icons[i].title) {
+                    iconSum = iconSum - 100;
+                    details = details + "<li><h3>" + icons[i].title + ": $-100</h3></li>";
+                }
+                if (ckMatches[j] !== "bar" && ckMatches[j] !== "bell" && ckMatches[j] === icons[i].title) {
 
                     totals[i].count = totals[i].count + 1;
                     if (totals[i].count > 1) {
                         iconSum = iconSum + icons[i].value;
-
                         details = details + "<li><h3>" + icons[i].title + ": $" + icons[i].value + "</h3></li>";
-
                     }
-
                 }
             }
         }
-
         document.getElementById("winningDetails").innerHTML = details;
         document.getElementById("iconSum").innerHTML = iconSum;
-        // console.log("JSON.stringify(totals): " + JSON.stringify(totals));
         return false;
     }
-
 }
 
