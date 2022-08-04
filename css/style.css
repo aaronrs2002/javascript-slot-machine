@@ -4,11 +4,11 @@ body {
     font-family: "Raleway", sans-serif;
     font-size: 1rem;
 
-    background: url("https://aaronrs2002.github.io/black-jack/img/cardBG.jpg");
 }
 
 body:after {
     content: "";
+    background: url("https://aaronrs2002.github.io/black-jack/img/cardBG.jpg");
     opacity: .3;
     top: 0;
     left: 0;
