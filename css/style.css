@@ -19,7 +19,8 @@ body:after {
 
 }
 
-.btn-group.block {
+.btn-group.block,
+.btn-block {
     width: 100%;
     padding: 0px;
 }
@@ -41,6 +42,9 @@ h5 {
     padding: 0;
 
 }
+
+/*START SLOT CSS*/
+
 
 /*START FOOTER*/
 footer {

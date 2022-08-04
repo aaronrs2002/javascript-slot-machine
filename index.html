@@ -24,12 +24,15 @@
         <div class="row">
             <div class="col-md-12">
 
-                <div class="btn-group block mb-2" role="group">
-                    <button type="button" class="btn btn-primary" onClick="javascript:checkRandom(true)">Pull</button>
-                    <button type="button" class="btn btn-primary" onClick="javascript:checkRandom(false)">Stop</button>
-                </div>
+
+                <button class="btn btn-primary btn-block" title="Pull"
+                    onClick="javascript:checkRandom(true)">Pull</button>
+
+                <button class="btn btn-primary btn-block hide" title="Stop"
+                    onClick="javascript:checkRandom(false)">Stop</button>
+
             </div>
-            <div class="col-md-12">
+            <div class="col-md-12 hide" data-hide="1">
 
                 <div class="alert alert-secondary" role="alert">
                     <h1>Total:<span id="iconSum"></span>
@@ -39,10 +42,20 @@
 
                 </h1>
             </div>
-            <div class="col-md-12 hide" data-hide="1">
+            <div class="col-md-12">
 
-                <div class="alert alert-light" role="alert">
-                    <span id="iconTarget"></span>
+                <div class="alert alert-light d-flex justify-content-center" role="alert">
+                    <span class="p-2" id="iconTarget">
+                        <div data-icon="bar"></div>
+                        <div data-icon="purple"></div>
+                        <div data-icon="orange"></div>
+                        <div data-icon="bell"></div>
+                        <div data-icon="watermelon"></div>
+                        <div data-icon="lemon"></div>
+                        <div data-icon="dollars"></div>
+                        <div data-icon="orange"></div>
+                        <div data-icon="bell"></div>
+                    </span>
                 </div>
             </div>
             <div class="col-md-12 hide" data-hide="2">

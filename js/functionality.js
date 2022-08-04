@@ -24,10 +24,14 @@ function getRandom() {
 
 function checkRandom(status) {
     document.querySelector("[data-hide='1']").classList.remove("hide");
+    document.querySelector("[title='Pull']").classList.add("hide");
+    document.querySelector("[title='Stop']").classList.remove("hide");
     if (status == true) {
         random = setInterval(getRandom, 100);
     } else {
         document.querySelector("[data-hide='2']").classList.remove("hide");
+        document.querySelector("[title='Pull']").classList.remove("hide");
+        document.querySelector("[title='Stop']").classList.add("hide");
         let iconSum = 0;
         let details = "";
         let totals = [
@@ -63,7 +67,7 @@ function checkRandom(status) {
                     totals[i].count = totals[i].count + 1;
                     if (totals[i].count > 1) {
                         iconSum = iconSum + icons[i].value;
-                        details = details + "<li><h3>" + icons[i].title + ": $" + icons[i].value + "</h3></li>";
+                        details = details + "<li><h3>Extra " + icons[i].title + ": $" + icons[i].value + "</h3></li>";
                     }
                 }
             }
