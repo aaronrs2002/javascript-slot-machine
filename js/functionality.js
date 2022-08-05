@@ -24,6 +24,7 @@ function getRandom() {
             iconTargetHTML = iconTargetHTML + "<div data-icon='" + icons[number].title + "'></div>";
         }
         document.getElementById("iconTarget").innerHTML = iconTargetHTML;
+
     }
 }
 
@@ -33,6 +34,7 @@ function checkRandom(status) {
     document.querySelector("[title='Stop']").classList.remove("hide");
     if (status == true) {
         random = setInterval(getRandom, 100);
+        setTimer();
     } else {
         document.querySelector("[data-hide='2']").classList.remove("hide");
         document.querySelector("[title='Pull']").classList.remove("hide");
@@ -78,7 +80,11 @@ function checkRandom(status) {
             }
         }
         document.getElementById("winningDetails").innerHTML = details;
-        document.getElementById("iconSum").innerHTML = iconSum;
+        let plusMinus = "";
+        if (iconSum >= 0) {
+            plusMinus = "+"
+        }
+        document.getElementById("iconSum").innerHTML = plusMinus + iconSum;
         balance = balance + iconSum;
         document.getElementById("balanceTarget").innerHTML = balance;
         localStorage.setItem("balance", balance)
@@ -86,3 +92,13 @@ function checkRandom(status) {
     }
 }
 
+
+function setTimer() {
+    setTimeout(() => {
+        if (random !== null) {
+            checkRandom(false);
+        } else {
+            return false;
+        }
+    }, 10000);
+}
