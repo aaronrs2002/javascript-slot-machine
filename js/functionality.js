@@ -7,6 +7,11 @@ let ckMatches = [];
 let doublePrize = 0;
 let triplePrize = 0;
 let count = 0;
+let balance = 500;
+if (localStorage.getItem("balance") && Number(localStorage.getItem("balance"))) {
+    balance = Number(localStorage.getItem("balance"));
+    document.getElementById("balanceTarget").innerHTML = balance;
+}
 function getRandom() {
     if (random) {
         iconObj = [];
@@ -74,6 +79,9 @@ function checkRandom(status) {
         }
         document.getElementById("winningDetails").innerHTML = details;
         document.getElementById("iconSum").innerHTML = iconSum;
+        balance = balance + iconSum;
+        document.getElementById("balanceTarget").innerHTML = balance;
+        localStorage.setItem("balance", balance)
         return false;
     }
 }
