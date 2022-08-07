@@ -25,6 +25,9 @@ body:after {
     padding: 0px;
 }
 
+footer a {
+    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em rgb(206, 206, 242);
+}
 
 h1,
 h2,
