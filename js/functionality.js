@@ -30,14 +30,14 @@ function getRandom() {
 
 function checkRandom(status) {
     document.querySelector(".alert-light").classList.remove("hide");
-    document.querySelector("[title='Pull']").classList.add("hide");
+    document.querySelector("[title='START']").classList.add("hide");
     document.querySelector("[title='Stop']").classList.remove("hide");
     if (status == true) {
         random = setInterval(getRandom, 100);
     } else {
         document.querySelector("[data-hide='1']").classList.remove("hide");
         document.querySelector("[data-hide='2']").classList.remove("hide");
-        document.querySelector("[title='Pull']").classList.remove("hide");
+        document.querySelector("[title='START']").classList.remove("hide");
         document.querySelector("[title='Stop']").classList.add("hide");
         let iconSum = 0;
         let details = "";
