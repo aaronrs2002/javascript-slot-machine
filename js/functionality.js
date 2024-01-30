@@ -1,4 +1,4 @@
-function generate() {
+function generate() {//SELECT A RANDOM NUMBER BETWEEN ZERO AND THE LENGTH OF "icons" ARRAY
     return Math.floor(Math.random() * icons.length);
 }
 let random = null;
@@ -17,7 +17,7 @@ function getRandom() {
         iconObj = [];
         let iconTargetHTML = "";
         ckMatches = [];
-        for (let i = 0; i < 9; i++) {
+        for (let i = 0; i < 9; i++) {//BUILD OUT RESULTS AND HTML IMAGE OUTPUT STRING WITH A "forLoop"
             const number = generate();
             iconObj.push(icons[number].value);
             ckMatches.push(icons[number].title);
@@ -29,11 +29,11 @@ function getRandom() {
 }
 
 function checkRandom(status) {
-    document.querySelector(".alert-light").classList.remove("hide");
+    document.querySelector(".alert-light").classList.remove("hide");//DISABLE OR HIDE COMPONENTS NOT BEING USED IN THIS SPECIFIC STEP
     document.querySelector("[title='START']").classList.add("hide");
     document.querySelector("[title='Stop']").classList.remove("hide");
     if (status == true) {
-        random = setInterval(getRandom, 100);
+        random = setInterval(getRandom, 100);//ITERATE THE getRandom() FUNCTION 1/10 OF EVERY SECOND
     } else {
         document.querySelector("[data-hide='1']").classList.remove("hide");
         document.querySelector("[data-hide='2']").classList.remove("hide");
@@ -41,7 +41,7 @@ function checkRandom(status) {
         document.querySelector("[title='Stop']").classList.add("hide");
         let iconSum = 0;
         let details = "";
-        let totals = [
+        let totals = [//EVERYTHING IS SET TO ZERO INITIALLY
             { title: "cherry", count: 0 },
             { title: "lemon", count: 0 },
             { title: "watermelon", count: 0 },
@@ -59,7 +59,7 @@ function checkRandom(status) {
         ];
         clearInterval(random, null);
         random = null;
-        for (let i = 0; i < icons.length; i++) {
+        for (let i = 0; i < icons.length; i++) {//THE "count" IS UPDATED EACH TIME THE MATCHING ICON IS REPRESENTED.
             for (let j = 0; j < ckMatches.length; j++) {
                 if (ckMatches[j] === "bar" && ckMatches[j] === icons[i].title) {
                     iconSum = iconSum - 150;
@@ -79,12 +79,12 @@ function checkRandom(status) {
                 }
             }
         }
-        document.getElementById("winningDetails").innerHTML = details;
+        document.getElementById("winningDetails").innerHTML = details; //RESULT ARE DISPLAY IN A STRING THAT WAS JUST COMPI;ED IN OUR "forLoop"
         let plusMinus = "";
         if (iconSum >= 0) {
             plusMinus = "+"
         }
-        document.getElementById("iconSum").innerHTML = plusMinus + iconSum;
+        document.getElementById("iconSum").innerHTML = plusMinus + iconSum;//THE TOTAL SCORE FOR THE ROUND
         balance = balance + iconSum;
         document.getElementById("balanceTarget").innerHTML = balance;
         localStorage.setItem("balance", balance)
