@@ -10,8 +10,8 @@ let count = 0;
 let balance = 500;
 if (localStorage.getItem("balance") && Number(localStorage.getItem("balance"))) {
     balance = Number(localStorage.getItem("balance"));
-    document.getElementById("balanceTarget").innerHTML = balance;
 }
+document.getElementById("balanceTarget").innerHTML = balance;
 function getRandom() {
     if (random) {
         iconObj = [];
@@ -63,18 +63,18 @@ function checkRandom(status) {
             for (let j = 0; j < ckMatches.length; j++) {
                 if (ckMatches[j] === "bar" && ckMatches[j] === icons[i].title) {
                     iconSum = iconSum - 150;
-                    details = details + "<li><h3>" + icons[i].title + ": $-150</h3></li>";
+                    details = details + "<li class='list-group-item list-group-item-danger'><h3>" + icons[i].title + ": $-150</h3></li>";
                 }
                 if (ckMatches[j] === "bell" && ckMatches[j] === icons[i].title) {
                     iconSum = iconSum - 100;
-                    details = details + "<li><h3>" + icons[i].title + ": $-100</h3></li>";
+                    details = details + "<li class='list-group-item list-group-item-danger'><h3>" + icons[i].title + ": $-100</h3></li>";
                 }
                 if (ckMatches[j] !== "bar" && ckMatches[j] !== "bell" && ckMatches[j] === icons[i].title) {
 
                     totals[i].count = totals[i].count + 1;
                     if (totals[i].count > 1) {
                         iconSum = iconSum + icons[i].value;
-                        details = details + "<li><h3>Extra " + icons[i].title + ": $" + icons[i].value + "</h3></li>";
+                        details = details + "<li class='list-group-item list-group-item-success'><h3>Extra " + icons[i].title + ": $" + icons[i].value + "</h3></li>";
                     }
                 }
             }
@@ -85,6 +85,23 @@ function checkRandom(status) {
             plusMinus = "+"
         }
         document.getElementById("iconSum").innerHTML = plusMinus + iconSum;//THE TOTAL SCORE FOR THE ROUND
+        if (iconSum <= 0) {
+            document.querySelector("[data-iconsum]").classList.add("alert-danger");
+            try {
+                document.querySelector("[data-iconsum]").classList.remove("alert-secondary");
+                document.querySelector("[data-iconsum]").classList.remove("alert-success");
+            } catch (error) {
+                console.log("no item found: " + error)
+            }
+        } else {
+            document.querySelector("[data-iconsum]").classList.add("alert-success");
+            try {
+                document.querySelector("[data-iconsum]").classList.remove("alert-secondary");
+                document.querySelector("[data-iconsum]").classList.remove("alert-danger");
+            } catch (error) {
+                console.log("no item found: " + error)
+            }
+        }
         balance = balance + iconSum;
         document.getElementById("balanceTarget").innerHTML = balance;
         localStorage.setItem("balance", balance)
