@@ -104,7 +104,8 @@ function checkRandom(status) {
         }
         balance = balance + iconSum;
         document.getElementById("balanceTarget").innerHTML = balance;
-        localStorage.setItem("balance", balance)
+        localStorage.setItem("balance", balance);
+        ckHighScore();
         return false;
     }
 }
