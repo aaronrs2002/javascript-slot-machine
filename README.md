@@ -6,4 +6,4 @@ What is a CSS sprite: an image with many small icons on a page
 Why are they useful: you only load one image and re-utilize it over and over
 
 
-l,esson on youtube: https://www.youtube.com/watch?v=YESUHPatB0I
+Here is the lesson on youtube: https://www.youtube.com/watch?v=YESUHPatB0I
